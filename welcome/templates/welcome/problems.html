@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Problems</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="problems.css"/>
+    <style>
+        button, p {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="app" class="container">
+    <div class="question-title">
+        <h3 id="title">
+            <button id="previous-problem" class="btn btn-primary btn-round">Previous Problem</button>
+            <span></span>
+            <button id="next-problem" class="btn btn-primary btn-round">Next Problem</button>
+        </h3>
+    </div>
+    <div>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link description active" href="javascript:void(0);">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hints" href="javascript:void(0);">Hints</a>
+                </li>
+            </ul>
+        </nav>
+        <p id="content"></p>
+    </div>
+    <div id="input">
+        <div id="editor"></div>
+        <button id="submit" class="btn btn-primary btn-round">Submit</button>
+        <div id="message"></div>
+    </div>
+</div>
+<template id="editor-template">
+    <label></label>
+    <input title="editor"/>
+</template>
+<script src="problems.js"></script>
+</body>
+</html>

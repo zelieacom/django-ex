@@ -3,6 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from welcome.views import index, health
+from welcome import problems
 
 urlpatterns = [
     # Examples:
@@ -12,6 +13,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^problems', problems.index),
 ]
 
 if settings.DEBUG:

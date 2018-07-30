@@ -77,10 +77,11 @@ window.object = {
         let content = problem[object.current];
         if (object.index < localStorage.getItem('index')) {
             $('#next-problem').attr('disabled', false);
-            $('#content').html(calculate(problem['answers']));
             $('#input').hide();
+            $('#content').html(calculate(problem['answers']));
         } else {
             $('#next-problem').attr('disabled', true);
+            $('#input').show();
             let answers = [];
             for (let index = 0; index < problem['answers'].length; ++index) {
                 let span = document.createElement('span');
